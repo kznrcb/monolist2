@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
 Item.find_or_create_by( item_code: 'book:16931693', title: 'パーフェクトRuby　on　Rails [ すがわらまさのり ]', detail_page_url: 'http://item.rakuten.co.jp/book/12770135/', small_image: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5165/9784774165165.jpg?_ex=64x64', medium_image: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5165/9784774165165.jpg?_ex=128x128', large_image: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5165/9784774165165.jpg')
 Item.find_or_create_by( item_code: 'booxstore:11284424', title: 'Ruby　on　Rails　4アプリケーションプログラミング／山田祥寛【2500円以上送料無料】', detail_page_url: 'http://item.rakuten.co.jp/booxstore/bk-4774164100/', small_image: 'http://thumbnail.image.rakuten.co.jp/@0_mall/booxstore/cabinet/00566/bk4774164100.jpg?_ex=64x64', medium_image: 'http://thumbnail.image.rakuten.co.jp/@0_mall/booxstore/cabinet/00566/bk4774164100.jpg?_ex=128x128', large_image: 'http://thumbnail.image.rakuten.co.jp/@0_mall/booxstore/cabinet/00566/bk4774164100.jpg')
 Item.find_or_create_by( item_code: 'book:17434418', title: '基礎Ruby　on　Rails改訂3版 [ 黒田努 ]', detail_page_url: 'http://item.rakuten.co.jp/book/13229503/', small_image: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/8154/9784844338154.jpg?_ex=64x64', medium_image: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/8154/9784844338154.jpg?_ex=128x128', large_image: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/8154/9784844338154.jpg')
