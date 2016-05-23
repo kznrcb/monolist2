@@ -34,11 +34,10 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <%= link_to "had item top 10" , have_ranking_path(current_user.id) %>
-                    <%= Have.limit(10).order('user_id desc').group(:item_id).count(:user_id).item_id.inspect %>
+                    <%= link_to "had item top 10" , have_ranking_path %>
                   </li>
                   <li>
-                    <%= link_to "wanted item top 10", want_ranking_path(current_user.id) %>
+                    <%= link_to "wanted item top 10", want_ranking_path %>
                   </li>
                 </ul>
               </li>
