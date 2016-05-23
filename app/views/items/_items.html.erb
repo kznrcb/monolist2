@@ -4,7 +4,7 @@
       <div class="item-box">
         <div class="image">
           <div class="img-wrap">
-            <% #TODO 商品画像 %>
+            <% # 商品画像 %>
             <% if item['mediumImageUrls'] %>
               <%= image_tag(item['mediumImageUrls'].first['imageUrl'].gsub('?_ex=128x128', ''), alt: item['itemName']) %>
             <% else %>
@@ -14,7 +14,7 @@
         </div>
         <div class="detail">
           <p class="title">
-            <% #TODO 商品タイトル %>
+            <% # 商品タイトル %>
               <%= item['itemName'] %>
           </p>
         </div>

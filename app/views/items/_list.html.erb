@@ -6,7 +6,6 @@
           <div class="img-wrap">
             <% if item.medium_image.present? %>
               <%= image_tag(item.medium_image.gsub('?_ex=128x128', '') , alt: item.title) %>
-              <%#= item.detail_page_url%>
             <% else %>
               <%= image_tag("no-image.png" , alt: item.title) %>
             <% end %>
