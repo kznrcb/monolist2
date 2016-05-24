@@ -2,12 +2,14 @@
   <title>Wanted items top 10- monolist</title>
   <meta name="description" content="欲しい人が多い商品TOP10">
 <% end %>
-<h1>Wanted items top 10</h1>
-<% @items.each do |item| %>
-  <div class="container">
-    <div class="container-inner inner-sm clearfix">
-      <h3>No,<%= @items.index(item)+1 %></h3>
-      <%= render "list", item: item %>
-    </div>
+
+<div class="container">
+  <div class="container-inner inner-sm clearfix">
+    <h1><%= @title %> items top 10</h1>
+       <% @ranking.each do |item, rank| %>
+          </br>
+          <h2>No,<%= rank %></h2>
+          <%= render 'list', item: Item.find(item), rank: rank %>
   </div>
+</div>
 <% end %>

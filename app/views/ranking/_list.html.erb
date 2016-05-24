@@ -3,23 +3,27 @@
     <div class="item-single-main">
       <div class="image">
         <div class="img-wrap">
-　          <% if @item.medium_image.present? %>
-              <%= image_tag(@item.medium_image.gsub('?_ex=128x128', '') , alt: @item.title) %>
+　          <% if item.medium_image.present? %>
+              <%= image_tag(item.medium_image.gsub('?_ex=128x128', '') , alt: item.title) %>
             <% else %>
-              <%= image_tag("no-image.png" , alt: @item.title) %>
+              <%= image_tag("no-image.png" , alt: item.title) %>
             <% end %>
         </div>
       </div>
       <div class="title">
-        <%= @item.title %>
+        <%= item.title %>
       </div>
-      <%= render 'action' , item: @item %>
+      <%= render 'items/action' , item: item if logged_in? %>
     </div>
     <div class="item-single-side">
       <div class="side-box">
-        <h4 class="side-box-title">Have したユーザー</h4>
+        <h4 class="side-box-title">
+          These
+          <%= item.have_users.count if @title == "have" %>
+          <%= item.want_users.count if @title == "want" %> 
+          users <%= @title %> this item</h4>
         <div class="side-box-body">
-          <% # TODO Haveしたユーザー一覧 %>
-          <%= render 'users/overview' , users: @item.have_users %>
+          <%= render 'users/overview' , users: item.have_users if @title == "have" %>
+          <%= render 'users/overview' , users: item.want_users if @title == "want" %>
         </div>
       </div>
